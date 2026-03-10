@@ -45,10 +45,10 @@ export function About() {
             </p>
             
             <div className="flex items-center gap-4 sm:gap-6 mb-10 p-4 sm:p-6 rounded-3xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 shadow-sm">
-              <div className="text-3xl sm:text-4xl font-bold text-primary">3+</div>
+              <div className="text-3xl sm:text-4xl font-bold text-primary">2+</div>
               <div className="h-10 w-px bg-slate-200 dark:bg-slate-700" />
               <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600 dark:text-slate-400 leading-relaxed">
-                Years of Professional<br />Full Stack Experience
+                Years of Professional<br />Backend & Full Stack Experience
               </div>
             </div>
             
@@ -106,7 +106,7 @@ export function About() {
                 >
                   <p><span className="text-purple-400">@Service</span></p>
                   <p><span className="text-purple-400">public class</span> <span className="text-yellow-200">FullStackSpecialist</span> {"{"}</p>
-                  <p className="ml-4"><span className="text-purple-400">private final</span> <span className="text-blue-300">Experience</span> exp = <span className="text-orange-400">3_YEARS</span>;</p>
+                  <p className="ml-4"><span className="text-purple-400">private final</span> <span className="text-blue-300">Experience</span> exp = <span className="text-orange-400">2_YEARS</span>;</p>
                   <p className="ml-4"><span className="text-purple-400">private final</span> <span className="text-blue-300">Stack</span> stack = <span className="text-emerald-400">REACT_SPRING_BOOT</span>;</p>
                   <br />
                   <p className="ml-4"><span className="text-blue-400">@PostConstruct</span></p>
