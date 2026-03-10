@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: vikas-portfolio
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: VITE_GOOGLE_SHEET_SCRIPT_URL
+        sync: false # User will need to set this manually in Render dashboard
+      - key: PORT
+        value: 3000
