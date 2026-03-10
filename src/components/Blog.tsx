@@ -267,8 +267,8 @@ export function Blog() {
     <section id="blog" className="section-padding bg-slate-50 dark:bg-slate-900/50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">Latest Articles</h2>
-          <p className="text-slate-700 dark:text-slate-300">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-950 dark:text-white">Latest Articles</h2>
+          <p className="text-slate-800 dark:text-slate-300">
             I write about Java, Spring Boot, and backend architecture to share my knowledge and help other developers.
           </p>
         </div>
@@ -298,10 +298,10 @@ export function Blog() {
                   <span>{article.category}</span>
                 </div>
                 
-                <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors line-clamp-2 text-slate-900 dark:text-white">
+                <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors line-clamp-2 text-slate-950 dark:text-white">
                   {article.title}
                 </h3>
-                <p className="text-slate-700 dark:text-slate-400 text-sm mb-6 line-clamp-3 leading-relaxed">
+                <p className="text-slate-800 dark:text-slate-400 text-sm mb-6 line-clamp-3 leading-relaxed">
                   {article.excerpt}
                 </p>
                 

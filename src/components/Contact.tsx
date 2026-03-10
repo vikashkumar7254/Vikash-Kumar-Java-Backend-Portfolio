@@ -69,11 +69,11 @@ export function Contact() {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* LEFT SIDE */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-950 dark:text-white">
               Let’s Build Your Backend the Right Way
             </h2>
 
-            <p className="text-lg text-slate-600 dark:text-slate-400 mb-10">
+            <p className="text-lg text-slate-800 dark:text-slate-400 mb-10">
               Have a backend challenge or need a scalable API system?  
               I’m available for freelance and remote backend projects.
             </p>
@@ -136,7 +136,7 @@ export function Contact() {
             {/* Social Icons */}
             <div className="mt-12 flex gap-4">
               <a
-                href="https://github.com/vikashkumar7254"
+                href="https://github.com/vikashkumar7254/Vikash-Kumar-Java-Backend-Portfolio"
                 target="_blank"
                 className="p-3 rounded-xl bg-white dark:bg-slate-800 shadow-sm hover:text-primary transition-colors"
               >
@@ -171,10 +171,10 @@ export function Contact() {
               {/* Name + Email */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="text-sm font-semibold">Name</label>
+                  <label className="text-sm font-semibold text-slate-950 dark:text-white">Name</label>
                   <input
                     {...register("name", { required: "Name is required" })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-950 dark:text-white"
                     placeholder="John Doe"
                   />
                   {errors.name && (
@@ -185,7 +185,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label className="text-sm font-semibold">Email</label>
+                  <label className="text-sm font-semibold text-slate-950 dark:text-white">Email</label>
                   <input
                     {...register("email", {
                       required: "Email is required",
@@ -194,7 +194,7 @@ export function Contact() {
                         message: "Invalid email address",
                       },
                     })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-950 dark:text-white"
                     placeholder="john@example.com"
                   />
                   {errors.email && (
@@ -207,10 +207,10 @@ export function Contact() {
 
               {/* Subject */}
               <div>
-                <label className="text-sm font-semibold">Subject</label>
+                <label className="text-sm font-semibold text-slate-950 dark:text-white">Subject</label>
                 <input
                   {...register("subject", { required: "Subject is required" })}
-                  className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-950 dark:text-white"
                   placeholder="Project Inquiry"
                 />
                 {errors.subject && (
@@ -222,11 +222,11 @@ export function Contact() {
 
               {/* Message */}
               <div>
-                <label className="text-sm font-semibold">Message</label>
+                <label className="text-sm font-semibold text-slate-950 dark:text-white">Message</label>
                 <textarea
                   {...register("message", { required: "Message is required" })}
                   rows={5}
-                  className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none text-slate-950 dark:text-white"
                   placeholder="Tell me about your project..."
                 />
                 {errors.message && (

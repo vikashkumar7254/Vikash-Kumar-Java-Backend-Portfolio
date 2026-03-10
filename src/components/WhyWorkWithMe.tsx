@@ -39,8 +39,8 @@ export function WhyWorkWithMe() {
     <section className="section-padding bg-slate-50 dark:bg-slate-900/50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">Why Work With Me?</h2>
-          <p className="text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-950 dark:text-white">Why Work With Me?</h2>
+          <p className="text-slate-800 dark:text-slate-300 max-w-2xl mx-auto">
             I don't just write code; I build robust foundations for your business to grow upon.
           </p>
         </div>
@@ -59,8 +59,8 @@ export function WhyWorkWithMe() {
                 <CheckCircle2 className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h3 className="font-bold mb-2 text-slate-900 dark:text-white">{reason.title}</h3>
-                <p className="text-sm text-slate-700 dark:text-slate-400 leading-relaxed">
+                <h3 className="font-bold mb-2 text-slate-950 dark:text-white">{reason.title}</h3>
+                <p className="text-sm text-slate-800 dark:text-slate-400 leading-relaxed">
                   {reason.description}
                 </p>
               </div>

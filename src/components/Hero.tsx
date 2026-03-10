@@ -26,13 +26,13 @@ export function Hero() {
           <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-6 tracking-wider uppercase">
             Available for Remote & Freelance Projects
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 max-w-4xl mx-auto leading-[1.1] text-slate-900 dark:text-white">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 max-w-4xl mx-auto leading-[1.1] text-slate-950 dark:text-white">
             Java Backend Developer Specializing in <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400">
               Secure & Scalable API Systems
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-800 dark:text-slate-300 max-w-2xl mx-auto mb-8 leading-relaxed">
             I help startups and businesses build production-ready backend systems using Spring Boot, secure authentication, and optimized database architecture.
           </p>
 

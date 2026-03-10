@@ -32,7 +32,7 @@ export function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="text-xl font-bold tracking-tighter">
+        <a href="#" className="text-xl font-bold tracking-tighter text-slate-950 dark:text-white">
           VIKASH<span className="text-primary">.KUMAR</span>
         </a>
 
@@ -42,7 +42,7 @@ export function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-slate-900 dark:text-white hover:text-primary transition-colors"
+              className="text-sm font-medium text-slate-950 dark:text-white hover:text-primary transition-colors"
             >
               {link.name}
             </a>
@@ -70,7 +70,7 @@ export function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-lg font-medium text-slate-900 dark:text-white hover:text-primary transition-colors"
+              className="text-lg font-medium text-slate-950 dark:text-white hover:text-primary transition-colors"
             >
               {link.name}
             </a>

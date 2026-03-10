@@ -36,11 +36,11 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900 dark:text-white">Building the Backbone of Modern Applications</h2>
-            <p className="text-lg text-slate-800 dark:text-slate-300 mb-6 leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-950 dark:text-white">Building the Backbone of Modern Applications</h2>
+            <p className="text-lg text-slate-900 dark:text-slate-300 mb-6 leading-relaxed">
               I am Vikash Kumar, a Java Backend Developer with 2-3 years of hands-on experience in building scalable REST APIs using Spring Boot.
             </p>
-            <p className="text-lg text-slate-800 dark:text-slate-300 mb-8 leading-relaxed">
+            <p className="text-lg text-slate-900 dark:text-slate-300 mb-8 leading-relaxed">
               My expertise lies in authentication systems, role-based access control, database design, and secure backend architecture. I focus on writing clean, maintainable, and production-ready code that solves complex business problems.
             </p>
             
@@ -58,8 +58,8 @@ export function About() {
                   <div className={`w-10 h-10 rounded-xl ${card.bg} ${card.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
                     <card.icon className="w-5 h-5" />
                   </div>
-                  <h4 className="font-bold text-sm mb-1 text-slate-900 dark:text-white">{card.title}</h4>
-                  <p className="text-[10px] text-slate-800 dark:text-slate-400 leading-tight font-medium">{card.description}</p>
+                  <h4 className="font-bold text-sm mb-1 text-slate-950 dark:text-white">{card.title}</h4>
+                  <p className="text-[10px] text-slate-900 dark:text-slate-400 leading-tight font-medium">{card.description}</p>
                 </div>
               ))}
             </div>

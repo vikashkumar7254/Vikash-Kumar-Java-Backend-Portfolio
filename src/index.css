@@ -10,6 +10,8 @@
   --color-primary-dark: #059669; /* Emerald 600 */
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -19,7 +21,7 @@
     @apply font-sans bg-white text-slate-900 transition-colors duration-300;
   }
   
-  .dark body {
+  html.dark body {
     @apply bg-slate-950 text-slate-100;
   }
 }

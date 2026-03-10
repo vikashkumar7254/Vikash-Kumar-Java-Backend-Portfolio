@@ -51,8 +51,8 @@ export function Services() {
     <section id="services" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">Services I Offer</h2>
-          <p className="text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-950 dark:text-white">Services I Offer</h2>
+          <p className="text-slate-800 dark:text-slate-300 max-w-2xl mx-auto">
             Specialized backend solutions tailored to your business needs, with a focus on security and scalability.
           </p>
         </div>
@@ -70,8 +70,8 @@ export function Services() {
               <div className={`w-14 h-14 ${service.bg} ${service.color} rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform`}>
                 <service.icon className="w-7 h-7" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-slate-900 dark:text-white">{service.title}</h3>
-              <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed">
+              <h3 className="text-xl font-bold mb-4 text-slate-950 dark:text-white">{service.title}</h3>
+              <p className="text-slate-800 dark:text-slate-400 text-sm leading-relaxed">
                 {service.description}
               </p>
             </motion.div>

@@ -27,8 +27,8 @@ export function Testimonials() {
     <section id="testimonials" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-950 dark:text-white">Client Testimonials</h2>
+          <p className="text-slate-800 dark:text-slate-400 max-w-2xl mx-auto">
             Don't just take my word for it. Here's what some of my previous clients have to say about my work.
           </p>
         </div>
@@ -53,12 +53,12 @@ export function Testimonials() {
                   referrerPolicy="no-referrer"
                 />
                 <div>
-                  <h4 className="font-bold">{testimonial.name}</h4>
-                  <p className="text-xs text-slate-500 font-medium">{testimonial.role}</p>
+                  <h4 className="font-bold text-slate-950 dark:text-white">{testimonial.name}</h4>
+                  <p className="text-xs text-slate-600 font-medium">{testimonial.role}</p>
                 </div>
               </div>
 
-              <p className="text-slate-600 dark:text-slate-400 italic leading-relaxed">
+              <p className="text-slate-800 dark:text-slate-400 italic leading-relaxed">
                 "{testimonial.content}"
               </p>
             </motion.div>

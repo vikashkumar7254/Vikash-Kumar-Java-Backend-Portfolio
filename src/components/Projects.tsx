@@ -125,10 +125,10 @@ export function Projects() {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-950 dark:text-white">
               Featured Backend Projects
             </h2>
-            <p className="text-slate-700 dark:text-slate-300">
+            <p className="text-slate-800 dark:text-slate-300">
               Selected backend systems demonstrating scalable architecture,
               real-time processing, enterprise features, and production-ready
               API design.
@@ -136,7 +136,7 @@ export function Projects() {
           </div>
 
           <a
-            href="https://github.com/vikashkumar7254"
+            href="https://github.com/vikashkumar7254/Vikash-Kumar-Java-Backend-Portfolio"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary font-semibold flex items-center gap-2 hover:underline"
@@ -200,12 +200,12 @@ export function Projects() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold mb-4 text-slate-950 dark:text-white group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed">
+                  <p className="text-slate-800 dark:text-slate-400 text-sm mb-6 leading-relaxed">
                     {project.description}
                   </p>
 

@@ -33,8 +33,8 @@ export function Skills() {
     <section id="skills" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Technical Proficiency</h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-950 dark:text-white">Technical Proficiency</h2>
+          <p className="text-slate-800 dark:text-slate-400 max-w-2xl mx-auto">
             My core strength lies in the Java ecosystem, focusing on building robust and secure backend architectures.
           </p>
         </div>
@@ -53,16 +53,16 @@ export function Skills() {
                 <div className="p-3 rounded-2xl bg-primary/10 text-primary">
                   <category.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold">{category.title}</h3>
+                <h3 className="text-xl font-bold text-slate-950 dark:text-white">{category.title}</h3>
               </div>
               
               <div className="grid sm:grid-cols-2 gap-4">
                 {category.skills.map((skill) => (
                   <div key={skill.name} className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 group hover:border-primary/30 transition-all">
                     <div className="flex justify-between items-center mb-1">
-                      <span className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">{skill.name}</span>
+                      <span className="text-sm font-bold text-slate-950 dark:text-white group-hover:text-primary transition-colors">{skill.name}</span>
                     </div>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-600 dark:text-slate-400">{skill.level}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-800 dark:text-slate-400">{skill.level}</span>
                   </div>
                 ))}
               </div>
