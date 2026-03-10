@@ -68,126 +68,136 @@ export function Contact() {
       className="section-padding bg-slate-50 dark:bg-slate-900/50"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* LEFT SIDE */}
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-950 dark:text-white">
-              Let’s Build Your Backend the Right Way
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-slate-950 dark:text-white">
+              Let’s Build Your Full Stack App the Right Way
             </h2>
 
-            <p className="text-lg text-slate-800 dark:text-slate-400 mb-10">
-              Have a backend challenge or need a scalable API system?  
-              I’m available for freelance and remote backend projects.
+            <p className="text-base sm:text-lg text-slate-800 dark:text-slate-400 mb-10">
+              Have a project idea or need a scalable full stack system?  
+              I’m available for freelance and remote full stack projects.
             </p>
 
-            <div className="space-y-8">
-              {/* Email */}
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
-                    Email Me
-                  </p>
-                  <a
-                    href="mailto:vikashkumar059.dev@gmail.com"
-                    className="font-semibold text-slate-900 dark:text-white hover:text-primary transition-colors"
+            <div className="space-y-6 sm:space-y-8">
+              {[
+                { 
+                  label: "Email Me", 
+                  value: "vikashkumar059.dev@gmail.com", 
+                  href: "mailto:vikashkumar059.dev@gmail.com",
+                  icon: Mail,
+                  color: "bg-primary/10 text-primary"
+                },
+                { 
+                  label: "LinkedIn", 
+                  value: "linkedin.com/in/kumarvikash7479", 
+                  href: "https://www.linkedin.com/in/kumarvikash7479",
+                  icon: Linkedin,
+                  color: "bg-blue-500/10 text-blue-500"
+                },
+                { 
+                  label: "Location", 
+                  value: "India (Open to Remote)", 
+                  icon: MapPin,
+                  color: "bg-slate-900/10 dark:bg-white/10 text-slate-900 dark:text-white"
+                }
+              ].map((item, idx) => (
+                <motion.div 
+                  key={item.label}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 + (idx * 0.1) }}
+                  className="flex items-center gap-4 group"
+                >
+                  <motion.div 
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    className={`w-10 h-10 sm:w-12 sm:h-12 rounded-2xl ${item.color} flex items-center justify-center shrink-0 transition-transform`}
                   >
-                    vikashkumar059.dev@gmail.com
-                  </a>
-                </div>
-              </div>
-
-              {/* LinkedIn */}
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-500 flex items-center justify-center">
-                  <Linkedin className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
-                    LinkedIn
-                  </p>
-                  <a
-                    href="https://www.linkedin.com/in/kumarvikash7479"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-semibold text-slate-900 dark:text-white hover:text-primary transition-colors"
-                  >
-                    linkedin.com/in/kumarvikash7479
-                  </a>
-                </div>
-              </div>
-
-              {/* Location */}
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-slate-900/10 dark:bg-white/10 text-slate-900 dark:text-white flex items-center justify-center">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
-                    Location
-                  </p>
-                  <p className="font-semibold text-slate-900 dark:text-white">
-                    India (Open to Remote)
-                  </p>
-                </div>
-              </div>
+                    <item.icon className="w-5 h-5" />
+                  </motion.div>
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
+                      {item.label}
+                    </p>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        target={item.href.startsWith("http") ? "_blank" : undefined}
+                        rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                        className="text-sm sm:text-base font-semibold text-slate-900 dark:text-white hover:text-primary transition-colors break-all"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-sm sm:text-base font-semibold text-slate-900 dark:text-white">
+                        {item.value}
+                      </p>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
             </div>
 
             {/* Social Icons */}
-            <div className="mt-12 flex gap-4">
-              <a
-                href="https://github.com/vikashkumar7254/Vikash-Kumar-Java-Backend-Portfolio"
-                target="_blank"
-                className="p-3 rounded-xl bg-white dark:bg-slate-800 shadow-sm hover:text-primary transition-colors"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/kumarvikash7479"
-                target="_blank"
-                className="p-3 rounded-xl bg-white dark:bg-slate-800 shadow-sm hover:text-primary transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-
-              <a
-                href="mailto:vikashkumar059.dev@gmail.com"
-                className="p-3 rounded-xl bg-white dark:bg-slate-800 shadow-sm hover:text-primary transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="mt-12 flex gap-4"
+            >
+              {[
+                { icon: Github, href: "https://github.com/vikashkumar7254/Vikash-Kumar-Java-Backend-Portfolio" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/kumarvikash7479" },
+                { icon: Mail, href: "mailto:vikashkumar059.dev@gmail.com" }
+              ].map((social, idx) => (
+                <motion.a
+                  key={idx}
+                  whileHover={{ y: -5, scale: 1.1 }}
+                  href={social.href}
+                  target="_blank"
+                  className="p-3 rounded-xl bg-white dark:bg-slate-800 shadow-sm hover:text-primary transition-colors border border-slate-100 dark:border-slate-700"
+                >
+                  <social.icon className="w-5 h-5" />
+                </motion.a>
+              ))}
+            </motion.div>
+          </motion.div>
 
           {/* RIGHT SIDE FORM */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-slate-800 p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-700"
+            transition={{ duration: 0.6 }}
+            className="bg-white dark:bg-slate-800 p-6 sm:p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-700"
           >
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
               {/* Name + Email */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                 <div>
-                  <label className="text-sm font-semibold text-slate-950 dark:text-white">Name</label>
+                  <label className="text-xs sm:text-sm font-semibold text-slate-950 dark:text-white">Name</label>
                   <input
                     {...register("name", { required: "Name is required" })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-950 dark:text-white"
+                    className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm sm:text-base text-slate-950 dark:text-white"
                     placeholder="John Doe"
                   />
                   {errors.name && (
-                    <p className="text-xs text-red-500">
+                    <p className="text-[10px] text-red-500 mt-1">
                       {errors.name.message}
                     </p>
                   )}
                 </div>
 
                 <div>
-                  <label className="text-sm font-semibold text-slate-950 dark:text-white">Email</label>
+                  <label className="text-xs sm:text-sm font-semibold text-slate-950 dark:text-white">Email</label>
                   <input
                     {...register("email", {
                       required: "Email is required",
@@ -196,11 +206,11 @@ export function Contact() {
                         message: "Invalid email address",
                       },
                     })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-950 dark:text-white"
+                    className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm sm:text-base text-slate-950 dark:text-white"
                     placeholder="john@example.com"
                   />
                   {errors.email && (
-                    <p className="text-xs text-red-500">
+                    <p className="text-[10px] text-red-500 mt-1">
                       {errors.email.message}
                     </p>
                   )}
@@ -209,14 +219,14 @@ export function Contact() {
 
               {/* Subject */}
               <div>
-                <label className="text-sm font-semibold text-slate-950 dark:text-white">Subject</label>
+                <label className="text-xs sm:text-sm font-semibold text-slate-950 dark:text-white">Subject</label>
                 <input
                   {...register("subject", { required: "Subject is required" })}
-                  className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-950 dark:text-white"
+                  className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm sm:text-base text-slate-950 dark:text-white"
                   placeholder="Project Inquiry"
                 />
                 {errors.subject && (
-                  <p className="text-xs text-red-500">
+                  <p className="text-[10px] text-red-500 mt-1">
                     {errors.subject.message}
                   </p>
                 )}
@@ -224,15 +234,15 @@ export function Contact() {
 
               {/* Message */}
               <div>
-                <label className="text-sm font-semibold text-slate-950 dark:text-white">Message</label>
+                <label className="text-xs sm:text-sm font-semibold text-slate-950 dark:text-white">Message</label>
                 <textarea
                   {...register("message", { required: "Message is required" })}
-                  rows={5}
-                  className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none text-slate-950 dark:text-white"
+                  rows={4}
+                  className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none text-sm sm:text-base text-slate-950 dark:text-white"
                   placeholder="Tell me about your project..."
                 />
                 {errors.message && (
-                  <p className="text-xs text-red-500">
+                  <p className="text-[10px] text-red-500 mt-1">
                     {errors.message.message}
                   </p>
                 )}
@@ -241,7 +251,7 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting || isSubmitted}
-                className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all ${
+                className={`w-full py-3 sm:py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all text-sm sm:text-base ${
                   isSubmitted
                     ? "bg-green-500 text-white"
                     : isSubmitting 

@@ -4,14 +4,14 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 px-6 border-t border-slate-100 dark:border-slate-800">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        <div>
+    <footer className="py-12 px-4 sm:px-6 border-t border-slate-100 dark:border-slate-800">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+        <div className="flex flex-col items-center md:items-start">
           <a href="#" className="text-xl font-bold tracking-tighter text-slate-950 dark:text-white">
             VIKASH<span className="text-primary">.KUMAR</span>
           </a>
           <p className="text-sm text-slate-800 dark:text-slate-400 mt-2">
-            Java Backend Developer & Spring Boot Specialist
+            Java Full Stack Developer & Spring Boot Specialist
           </p>
         </div>
 
@@ -27,7 +27,7 @@ export function Footer() {
           </a>
         </div>
 
-        <div className="text-sm text-slate-600 dark:text-slate-400">
+        <div className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
           © {currentYear} Vikash Kumar. All rights reserved.
         </div>
       </div>

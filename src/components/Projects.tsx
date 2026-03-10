@@ -63,12 +63,12 @@ const projects: Project[] = [
     description:
       "Developed a full-scale online learning management system supporting students, teachers, and admins. Features include course purchasing, secure online payments, certificate generation, and real-time chat.",
     tech: [
+      "React",
       "Java",
       "Spring Boot",
       "Spring Security",
       "MySQL",
       "JWT",
-      "WebSocket",
     ],
     github: "https://github.com/vikashkumar7254/BLL_totur",
     category: "Enterprise",
@@ -89,11 +89,11 @@ const projects: Project[] = [
 
 const filterTabs = [
   "All",
+  "React",
   "Java",
   "Spring Boot",
   "Government",
   "Enterprise",
-  "Distributed",
   "Security",
 ];
 
@@ -126,12 +126,12 @@ export function Projects() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-950 dark:text-white">
-              Featured Backend Projects
+              Featured Full Stack Projects
             </h2>
             <p className="text-slate-800 dark:text-slate-300">
-              Selected backend systems demonstrating scalable architecture,
-              real-time processing, enterprise features, and production-ready
-              API design.
+              Selected full stack applications demonstrating end-to-end development,
+              modern frontend interfaces, secure backend systems, and production-ready
+              architecture.
             </p>
           </div>
 
@@ -169,15 +169,17 @@ export function Projects() {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+            {filteredProjects.map((project, idx) => (
               <motion.div
                 layout
                 key={project.title}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.3 }}
-                className="group bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-300"
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                whileHover={{ y: -10 }}
+                className="group bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300"
               >
                 <div className="p-8">
                   {/* Category + Featured Badge */}

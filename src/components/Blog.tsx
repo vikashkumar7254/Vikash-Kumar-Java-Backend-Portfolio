@@ -273,7 +273,7 @@ export function Blog() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {articles.map((article, idx) => (
             <motion.article
               key={idx}
@@ -293,20 +293,20 @@ export function Blog() {
                 />
               </div>
               
-              <div className="p-8">
-                <div className="flex items-center gap-4 mb-4 text-xs font-bold uppercase tracking-widest text-primary">
+              <div className="p-6 sm:p-8">
+                <div className="flex items-center gap-4 mb-4 text-[10px] font-bold uppercase tracking-widest text-primary">
                   <span>{article.category}</span>
                 </div>
                 
-                <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors line-clamp-2 text-slate-950 dark:text-white">
+                <h3 className="text-lg sm:text-xl font-bold mb-4 group-hover:text-primary transition-colors line-clamp-2 text-slate-950 dark:text-white">
                   {article.title}
                 </h3>
-                <p className="text-slate-800 dark:text-slate-400 text-sm mb-6 line-clamp-3 leading-relaxed">
+                <p className="text-slate-800 dark:text-slate-400 text-xs sm:text-sm mb-6 line-clamp-3 leading-relaxed">
                   {article.excerpt}
                 </p>
                 
                 <div className="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-700">
-                  <div className="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
+                  <div className="flex items-center gap-3 sm:gap-4 text-[10px] sm:text-xs text-slate-500 dark:text-slate-400">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-3 h-3" /> {article.date}
                     </span>
@@ -315,7 +315,7 @@ export function Blog() {
                     </span>
                   </div>
                   <button className="text-primary hover:translate-x-1 transition-transform">
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                   </button>
                 </div>
               </div>
@@ -327,7 +327,7 @@ export function Blog() {
       {/* Article Modal */}
       <AnimatePresence>
         {selectedArticle && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 md:p-8">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -339,13 +339,13 @@ export function Blog() {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="relative w-full max-w-4xl max-h-[90vh] bg-white dark:bg-slate-900 rounded-3xl shadow-2xl overflow-hidden flex flex-col"
+              className="relative w-full max-w-4xl max-h-[95vh] bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden flex flex-col"
             >
               <button 
                 onClick={() => setSelectedArticle(null)}
-                className="absolute top-6 right-6 p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-primary transition-colors z-10"
+                className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-primary transition-colors z-10"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
 
               <div className="overflow-y-auto flex-1">
@@ -357,8 +357,8 @@ export function Blog() {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <div className="p-8 md:p-12">
-                  <div className="flex items-center gap-4 mb-6 text-sm font-bold uppercase tracking-widest text-primary">
+                <div className="p-6 sm:p-8 md:p-12">
+                  <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-6 text-[10px] sm:text-sm font-bold uppercase tracking-widest text-primary">
                     <span>{selectedArticle.category}</span>
                     <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-700" />
                     <span className="text-slate-500 dark:text-slate-400">{selectedArticle.date}</span>
@@ -366,7 +366,7 @@ export function Blog() {
                     <span className="text-slate-500 dark:text-slate-400">{selectedArticle.readTime}</span>
                   </div>
                   
-                  <div className="markdown-body prose dark:prose-invert max-w-none">
+                  <div className="markdown-body prose prose-sm sm:prose-base dark:prose-invert max-w-none">
                     <Markdown>{selectedArticle.content}</Markdown>
                   </div>
                 </div>
