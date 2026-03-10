@@ -26,7 +26,7 @@ export function Contact() {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      const scriptUrl = import.meta.env.VITE_GOOGLE_SHEET_SCRIPT_URL;
+      const scriptUrl = import.meta.env.VITE_GOOGLE_SHEET_SCRIPT_URL || "https://script.google.com/macros/s/AKfycbxTRfbboTQ3Ia84-VZ9aVZrU6R-1OljZ3U-nV-HuK7PvKJFCUiWOau8msxluWb2uPy1/exec";
       
       if (scriptUrl) {
         // Send data to Google Sheets via Apps Script
