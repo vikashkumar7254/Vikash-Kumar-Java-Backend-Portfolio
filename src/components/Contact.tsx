@@ -26,19 +26,21 @@ export function Contact() {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      const scriptUrl = import.meta.env.VITE_GOOGLE_SHEET_SCRIPT_URL || "https://script.google.com/macros/s/AKfycbxTRfbboTQ3Ia84-VZ9aVZrU6R-1OljZ3U-nV-HuK7PvKJFCUiWOau8msxluWb2uPy1/exec";
+      const scriptUrl = import.meta.env.VITE_GOOGLE_SHEET_SCRIPT_URL || "https://script.google.com/macros/s/AKfycbweg6UvkShVtJOLrJ0LfijBlTBOSw5AVCpp1ds9NsgS_zE14iSflSRQRSy1ImQ9ad_a/exec";
       
       if (scriptUrl) {
         // Send data to Google Sheets via Apps Script
-        // Using fetch with 'no-cors' mode if the script doesn't handle CORS, 
-        // but standard POST is better if the script is set up correctly.
+        // Using URLSearchParams for better compatibility with no-cors and Apps Script doPost(e)
+        const params = new URLSearchParams();
+        params.append('name', data.name);
+        params.append('email', data.email);
+        params.append('subject', data.subject);
+        params.append('message', data.message);
+
         await fetch(scriptUrl, {
           method: 'POST',
-          mode: 'no-cors', // Apps Script often requires no-cors for simple web apps
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
+          mode: 'no-cors',
+          body: params,
         });
       } else {
         console.warn("Google Sheet Script URL not found in environment variables.");
