@@ -11,7 +11,6 @@ const navLinks = [
   { name: "Services", href: "#services" },
   { name: "Blog", href: "#blog" },
   { name: "Contact", href: "#contact" },
-  { name: "Resume", href: "https://docs.google.com/document/d/1CiQigXTWY65a9H5eNtut5-v2TWLVfoN-/edit", external: true },
 ];
 
 export function Navbar() {
@@ -52,8 +51,6 @@ export function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
               href={link.href}
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noopener noreferrer" : undefined}
               className="text-sm font-medium text-slate-950 dark:text-white hover:text-primary transition-colors relative group"
             >
               {link.name}

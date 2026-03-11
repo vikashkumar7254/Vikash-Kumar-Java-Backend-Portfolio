@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, CheckCircle2, FileText } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const highlights = [
   "React & Modern Frontend",
@@ -110,15 +110,6 @@ export function Hero() {
               >
                 <ArrowRight className="w-4 h-4" />
               </motion.span>
-            </a>
-            <a 
-              href="https://docs.google.com/document/d/1CiQigXTWY65a9H5eNtut5-v2TWLVfoN-/edit" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-outline flex items-center gap-2 w-full sm:w-auto justify-center group"
-            >
-              <FileText className="w-4 h-4 group-hover:scale-110 transition-transform" />
-              View Resume
             </a>
           </motion.div>
         </motion.div>

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, FileText } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,14 +16,23 @@ export function Footer() {
         </div>
 
         <div className="flex gap-6">
-          <a href="https://github.com/vikashkumar7254/Vikash-Kumar-Java-Backend-Portfolio" target="_blank" className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+          <a href="https://github.com/vikashkumar7254/Vikash-Kumar-Java-Backend-Portfolio" target="_blank" className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" title="GitHub">
             <Github className="w-5 h-5" />
           </a>
-          <a href="https://www.linkedin.com/in/kumarvikash7479" target="_blank" className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+          <a href="https://www.linkedin.com/in/kumarvikash7479" target="_blank" className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" title="LinkedIn">
             <Linkedin className="w-5 h-5" />
           </a>
-          <a href="mailto:vikashkumar059.dev@gmail.com" className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+          <a href="mailto:vikashkumar059.dev@gmail.com" className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" title="Email">
             <Mail className="w-5 h-5" />
+          </a>
+          <a 
+            href="https://docs.google.com/document/d/1CiQigXTWY65a9H5eNtut5-v2TWLVfoN-/edit" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+            title="Download Resume"
+          >
+            <FileText className="w-5 h-5" />
           </a>
         </div>
 

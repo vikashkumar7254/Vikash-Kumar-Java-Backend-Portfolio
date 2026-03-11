@@ -26,26 +26,28 @@ export function Contact() {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      const scriptUrl = import.meta.env.VITE_GOOGLE_SHEET_SCRIPT_URL || "https://script.google.com/macros/s/AKfycbweg6UvkShVtJOLrJ0LfijBlTBOSw5AVCpp1ds9NsgS_zE14iSflSRQRSy1ImQ9ad_a/exec";
+      // Use environment variable or a default fallback for demo
+      const scriptUrl = import.meta.env.VITE_GOOGLE_SHEET_SCRIPT_URL;
       
       if (scriptUrl) {
         // Send data to Google Sheets via Apps Script
-        // Using URLSearchParams for better compatibility with no-cors and Apps Script doPost(e)
-        const params = new URLSearchParams();
-        params.append('name', data.name);
-        params.append('email', data.email);
-        params.append('subject', data.subject);
-        params.append('message', data.message);
+        const formData = new FormData();
+        formData.append('name', data.name);
+        formData.append('email', data.email);
+        formData.append('subject', data.subject);
+        formData.append('message', data.message);
 
+        // Using no-cors mode as Apps Script doesn't support CORS easily
+        // This will always result in an opaque response, but the data reaches the script
         await fetch(scriptUrl, {
           method: 'POST',
           mode: 'no-cors',
-          body: params,
+          body: formData,
         });
       } else {
-        console.warn("Google Sheet Script URL not found in environment variables.");
-        // Fallback for demo purposes
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        // Fallback for when no script URL is provided - simulate a successful send
+        console.log("Form data (Demo Mode):", data);
+        await new Promise(resolve => setTimeout(resolve, 1500));
       }
 
       setIsSubmitted(true);
@@ -56,7 +58,14 @@ export function Contact() {
       }, 5000);
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Something went wrong. Please try again later.");
+      // Even if there's a network error, we show success in demo mode if no URL is set
+      // to prevent user frustration, but alert if a URL was actually intended.
+      if (import.meta.env.VITE_GOOGLE_SHEET_SCRIPT_URL) {
+        alert("Could not connect to the server. Please check your internet or try again later.");
+      } else {
+        setIsSubmitted(true);
+        reset();
+      }
     } finally {
       setIsSubmitting(false);
     }
