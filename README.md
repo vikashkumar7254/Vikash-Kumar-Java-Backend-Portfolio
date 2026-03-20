@@ -22,7 +22,7 @@ A modern, responsive developer portfolio built with React, Vite, Tailwind CSS, a
 ## Deployment on Render
 
 1. Push your code to a GitHub repository.
-2. Log in to [Render](https://render.com).
+2. Log in to [Render].
 3. Click **New +** and select **Blueprint**.
 4. Connect your GitHub repository.
 5. Render will use the `render.yaml` file to automatically configure your **Web Service**.
